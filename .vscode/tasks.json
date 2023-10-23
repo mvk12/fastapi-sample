@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compose Up",
+            "command": "docker-compose -f docker-compose.dev.yml up",
+            "type": "shell",
+            "group": "none"
+        },
+        {
+            "label": "Compose Down",
+            "command": "docker-compose -f docker-compose.dev.yml down",
+            "type": "shell",
+            "group": "none"
+        }
+    ]
+}

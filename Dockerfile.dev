@@ -1,0 +1,13 @@
+FROM docker.io/python:3.12.0
+
+LABEL version 0.0.1-dev
+
+WORKDIR /usr/src/app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 8000
+
+CMD [ "uvicorn", "main:app", "--reload" ]

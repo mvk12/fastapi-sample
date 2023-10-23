@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  webapp: 
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: webapp
+    restart: always
+    volumes:
+      - ./src:/usr/src/app
+    ports:
+      - 9000:8000
