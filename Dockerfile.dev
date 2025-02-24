@@ -1,12 +1,10 @@
-FROM docker.io/python:3.12.0
+FROM docker.io/python:3.12.9
 
-LABEL version 0.0.1-dev
+LABEL version 0.0.3-dev
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt .
-
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir fastapi[standard] pydantic
 
 EXPOSE 8000
 
