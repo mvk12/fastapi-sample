@@ -5,6 +5,8 @@ services:
       dockerfile: Dockerfile.dev
     container_name: fast-api-webapp
     restart: always
+    env_file:
+      - .env
     volumes:
       - ./requirements.txt:/usr/src/requirements.txt
       - ./src:/usr/src/app

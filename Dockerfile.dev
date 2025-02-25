@@ -4,7 +4,11 @@ LABEL version 0.0.3-dev
 
 WORKDIR /usr/src/app
 
-RUN pip install --no-cache-dir fastapi[standard] pydantic
+RUN pip install --no-cache-dir \
+    fastapi[standard] \
+    pydantic \
+    pyjwt \
+    passlib[bcrypt]
 
 EXPOSE 8000
 
